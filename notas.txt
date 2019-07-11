@@ -1,0 +1,10 @@
+*****   Estructura de datos *****
+
+Algoritmos de ordenamiento:
+    Bubble sort:
+    Insertion sort:
+    Shell sort:
+    Merge sort:
+    Quick sort:
+    
+
