@@ -1,10 +1,39 @@
 *****   Estructura de datos *****
 
-Algoritmos de ordenamiento:
-    Bubble sort:
+Algoritmos de ordenamiento: 
+
+    1. Bubble sort:
+        * Compara dos numeros entre si para poder ir haciendo el ordenmaineto de menor a mayor.
+        * Puede ordenar de menor a mayor o viceversa.
+
+        * Reglas:
+            - Los apuntadores que rigen nuestro algoritmo deben de ir al final y regresar el mimso numero de veces de posiciones de 
+            nuestro arreglo.
+                ºSi nuestro arreglo tiene 5 posiciones, nuestros apuntadores deben de ir al final y regresar 5 veces
+            -cada vez que se cumple la condicion que nosotros asignamos nuestros apuntadores deben de intercambiar los números
+            -Nunca podemos de perder de vista el número. Para eso usamos uan variable auxiliar
+
+
     Insertion sort:
     Shell sort:
     Merge sort:
     Quick sort:
+
+
+Algoritmos de Busqueda:
+    *Se encarga de encontrar en una lista de datos un valor que nosotros determinamos
+
+    1. Busqueda Binaria:
+        *Encontrar un valor en una lista ordenada. Basado en "Divide y venceras"
+        *Funciona dividiendo a la mitad repetidamente la lista o el arreglo, que podría contener el dato buscado, hasta reducirlo a 
+            un valor
+
+        *Reglas:
+            1. El arreglo debe tener valor unicos, es decir, no se deben repetir. (ID)
+                <Un ID:> es un identificador que nos ayuda a que aunque nosotros tengamos datos repetidos, siempre hay algo que los
+                 identifica el uno del otro. Osea nos aydua a identificar cuando tengamos varios iguales.
+            2. El arreglo debe estar ordenado de manera ascendente, es decir de menor a mayor.
+
+            NOTA: Para poder programarlo necesitamos 3 apuntadores y el uso de casting.
     
 
