@@ -34,6 +34,18 @@ Algoritmos de Busqueda:
                  identifica el uno del otro. Osea nos aydua a identificar cuando tengamos varios iguales.
             2. El arreglo debe estar ordenado de manera ascendente, es decir de menor a mayor.
 
-            NOTA: Para poder programarlo necesitamos 3 apuntadores y el uso de casting.
+            NOTA: Para poder programarlo necesitamos 3 apuntadores y el uso de casting. (Apuntador1, Apuntador2 y ApuntadorPM (punto medio))
+            *En busqueda binaria siempre el apuntoador1 compienza en la posicion 1(arreglo[0])de la lista o arreglo
+            *Apuntador2: Siempre inicia en la ultima posicon del arreglo
+            *ApuntadorPM: Posicion: (Apuntador1 + Apuntador2) / 2 ---------> Sumamos la posicion del apuntador 1 y 2 y lo dividimos entre 2
+                            y lo casteamos, osea le quitamos los decimales
+
+            *Obtenemos valor  del apuntador punto medio y lo comparamos con el valor buscado
+                -Es valor buscado igual a valor punto medio ----> True: termina el programa / False: Continuamos con la siguente inst.
+                -Es valor buscado mayor a valor punto medio ----> True: A1 = Posicion Apm + 1 / False
+                -Es valor buscado menor a valor punto medio ----> True: A2 = Posicion Apm - 1
+
+                Codigo en java
+
     
 
