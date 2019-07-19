@@ -44,6 +44,7 @@ Algoritmos de ordenamiento:
         * Recusos:
             - https://es.wikipedia.org/wiki/Ordenamiento_Shell
             - https://www.youtube.com/watch?v=AeCeFdSoPEM
+            - https://www.youtube.com/watch?v=rZIt5XnbrOc
 
         * Shell: Usando un ordenamiento O(n2) como el ordenamiento de burbuja o el ordenamiento por inserción
         * El Shell sort es una generalización del ordenamiento por inserción, teniendo en cuenta dos observaciones:
@@ -66,8 +67,51 @@ Algoritmos de ordenamiento:
                          - Al llegar al momento en el que K es igual a 1, entonces hacemos un *ordenamiento de insercion*
                  "n" --> cantidad de elementos en el arreglo
 
-    Merge sort:
+
+    4. Merge sort:
+        * Recursos:
+         - http://www.pythondiario.com/2018/08/ordenamiento-por-mezcla-merge-sort.html
+         - https://es.wikipedia.org/wiki/Ordenamiento_por_mezcla
+         - https://www.ecured.cu/MergeSort
+         - https://www.youtube.com/watch?v=Xhlf6f26M7Y
+
+        * es un algoritmo de ordenamiento externo
+        * Es de complejidad O(n log n)
+        * El algoritmo de ordenamiento por mezcla (merge sort en inglés) es un algoritmo de ordenamiento externo estable basado 
+          en la técnica divide y vencerás.
+        * Se va partiendo a la mitad hasta que tengamos sublistas de un elemento(usando recursividad)
+        * La idea de los algoritmos de ordenación por mezcla es dividir la matriz por la mitad una y otra vez hasta que cada pieza 
+          tenga solo un elemento de longitud. Luego esos elementos se vuelven a juntar (mezclados) en orden de clasificación.
+
+        * El ordenamiento por mezcla incorpora dos ideas principales para mejorar su tiempo de ejecución:
+            1. Una lista pequeña necesitará menos pasos para ordenarse que una lista grande.
+            2. Se necesitan menos pasos para construir una lista ordenada a partir de dos listas también ordenadas, que a partir 
+            de dos listas desordenadas. Por ejemplo, sólo será necesario entrelazar cada lista una vez que están ordenadas.
+            (EXTRA by: Santiago Yeomans) : Si una lista tiene 0 o 1 elementos, entonces ya está ordenada.
+            
+        * Si la lista es impar, se divide la longitud entre 2 y la lista de la izquierda es mayor a la de la derecha en 1.
+
+     * * * * Comparación con otros algoritmos de ordenamiento:* * * *
+            Aunque heapsort tiene los mismos límites de tiempo que merge sort, requiere sólo Θ(1) espacio auxiliar en lugar del Θ(n) 
+            de merge sort, y es a menudo más rápido en implementaciones prácticas. Quicksort, sin embargo, es considerado por mucho
+            como el más rápido algoritmo de ordenamiento de propósito general. En el lado bueno, merge sort es un ordenamiento
+            estable, paraleliza mejor, y es más eficiente manejando medios secuenciales de acceso lento. Merge sort es a menudo la
+            mejor opción para ordenar una lista enlazada: en esta situación es relativamente fácil implementar merge sort de manera
+            que sólo requiera Θ(1) espacio extra, y el mal rendimiento de las listas enlazadas ante el acceso aleatorio hace que 
+            otros algoritmos (como quicksort) den un bajo rendimiento, y para otros (como heapsort) sea algo imposible.
+
+            Para Perl 5.8, merge sort es el algoritmo de ordenamiento por defecto (lo era quicksort en versiones anteriores de Perl).
+             En Java los métodos de ordenación de Arrays usan merge sort o una modificación de quicksort dependiendo de los tipos de
+             datos y por cuestiones de eficiencia cambian a ordenamiento por inserción cuando se están ordenando menos de siete 
+             elementos en el array.
+
+
+
+
+
     Quick sort:
+
+
 
 
 Algoritmos de Busqueda:
