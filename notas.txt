@@ -3,19 +3,49 @@
 Algoritmos de ordenamiento: 
 
     1. Bubble sort:
+       * Recursos:
+            - https://www.ecured.cu/Ordenamiento_de_burbuja
+            - geekpedia de ernesto
+
         * Compara dos numeros entre si para poder ir haciendo el ordenmaineto de menor a mayor.
         * Puede ordenar de menor a mayor o viceversa.
+        * número de comparaciones pertenece al orden de n cuadrado.
+        * A pesar de que el ordenamiento de burbuja es uno de los algoritmos más sencillos de implementar, su orden O(n2) 
+          lo hace muy ineficiente para usar en listas que tengan más que un número reducido de elementos. Incluso entre los
+          algoritmos de ordenamiento de orden O(n2), otros procedimientos como el ordenamiento por inserción son considerados 
+          más eficientes
 
         * Reglas:
             - Los apuntadores que rigen nuestro algoritmo deben de ir al final y regresar el mimso numero de veces de posiciones de 
             nuestro arreglo.
-                ºSi nuestro arreglo tiene 5 posiciones, nuestros apuntadores deben de ir al final y regresar 5 veces
+                -> Si nuestro arreglo tiene 5 posiciones, nuestros apuntadores deben de ir al final y regresar 5 veces
             -cada vez que se cumple la condicion que nosotros asignamos nuestros apuntadores deben de intercambiar los números
             -Nunca podemos de perder de vista el número. Para eso usamos uan variable auxiliar
 
 
-    Insertion sort:
-    Shell sort:
+    2. Insertion sort:
+        * Recursos:
+            - http://lwh.free.fr/pages/algo/tri/tri_insertion_es.html
+
+        * La idea de este algoritmo de ordenación consiste en ir insertando un elemento de la lista ó un arreglo en la parte ordenada
+          de la misma, asumiendo que el primer elemento es la parte ordenada, el algoritmo ira comparando un elemento de la parte 
+          desordenada de la lista con los elementos de la parte ordenada, insertando el elemento en la posición correcta dentro de 
+          la parte ordenada, y así sucesivamente hasta obtener la lista ordenada.
+
+        * Requiere O(n²) operaciones para ordenar una lista de n elementos.
+        * En el caso más favorable (todos los datos ordenados) tiene un orden de complejidad de n (lineal), minetras que en el caso más
+          desfavorable tiene un orden de complejidad de n cuadrada 
+        * la flecha o apuntador siempre se mueve hacia adelante; nunca hacia atras
+
+    3. Shell sort:
+        * Recusos:
+            - https://es.wikipedia.org/wiki/Ordenamiento_Shell
+
+        * Shell: Usando un ordenamiento O(n2) como el ordenamiento de burbuja o el ordenamiento por inserción
+        * El Shell sort es una generalización del ordenamiento por inserción, teniendo en cuenta dos observaciones:
+            1. El ordenamiento por inserción es eficiente si la entrada está "casi ordenada".
+            2. El ordenamiento por inserción es ineficiente, en general, porque mueve los valores sólo una posición cada vez.
+
     Merge sort:
     Quick sort:
 
@@ -47,5 +77,31 @@ Algoritmos de Busqueda:
 
                 Codigo en java
 
-    
+
+
+
+
+    Listas en java:
+        *Las listas, son un tipo de dato abstracto que nos permite almacenar datos de una forma organizada al igual que los vectores,
+        pero, a diferenia de estos, esta estructura, está estructura es dinámica, por lo que no es necesario conocer la cantidad de
+        elementos que va a contener.
+        *En una lista, cada elemento apnta al siguente elemento, excepto el ultimo que tiene él último elemento, el cual no tiene un
+         sucesor y por tal motivo el valor del enlace es null.
+        *En este caso, los elementos son registros que contienen el dato a almacenar y un enlace al siguente elemento.
+        *Los elementos de una lista suelen recibir el nombre de nodos de lista.
+        *Cada nodo tiene dos campos:
+            - 1.Con información
+            - 2.Con un apuntador al siguente nodo de la lista.
+
+        *Tipos de listas en java:
+            *Dependiendo del procedimiento de insercion y extraccion de nodos en la lista , tenemos los siguientes tipos:
+                1. Lista tipo Pila
+                    - Una lista es de tipo pila, cuando las inserciones y extracciones se realizan por el mismo lado de la lista.+
+                    - Caracterísitca: El último elemento en entrar es el primero en salir
+                    - Se les conoce como LIFO (Last in, First Out)  ---> último en entrar, primero en salir
+                    - una pila al ser una lista pude almacenar en el campo de información de un nodo cualquier tipo de valor:
+                    valores enteros, valores flotantes, cadenas de caracteres, objetos, etc.
+                2. Lista tipo cola
+                3. Lista genéricas
+
 
