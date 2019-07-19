@@ -1,6 +1,9 @@
 *****   Estructura de datos *****
 
 Algoritmos de ordenamiento: 
+    - Un "buen algoritmo" de ordenamiento requiere de un orden nlogn comparaciones.
+    - Recursos:
+        https://www.monografias.com/trabajos/algordenam/algordenam.shtml
 
     1. Bubble sort:
        * Recursos:
@@ -40,11 +43,28 @@ Algoritmos de ordenamiento:
     3. Shell sort:
         * Recusos:
             - https://es.wikipedia.org/wiki/Ordenamiento_Shell
+            - https://www.youtube.com/watch?v=AeCeFdSoPEM
 
         * Shell: Usando un ordenamiento O(n2) como el ordenamiento de burbuja o el ordenamiento por inserción
         * El Shell sort es una generalización del ordenamiento por inserción, teniendo en cuenta dos observaciones:
             1. El ordenamiento por inserción es eficiente si la entrada está "casi ordenada".
             2. El ordenamiento por inserción es ineficiente, en general, porque mueve los valores sólo una posición cada vez.
+        
+        * Mejora del ordenamiento por insercion, por que:
+        * Pude comparar elementos separados por un espacio de varias posiciones, permitiendo que un elemento de pasos más grandes 
+          hacia su posicion esperada.
+        * En el transcurso del ordenmiento esos saltos se van acortando
+        * Una ves que el vector queda casi ordenadado, el ulitimo paso es ordenar por insercion, garantizando de esa manera el orden 
+          total del vector
+
+        * FORMULA: k = n/2
+                 "k" --> distancia de los elementos que se van a comparar. Utilizamos este numero para saber cual es el otro numero
+                         con el que vamos a comparar los datos, por ejemplo 10 + k(5) tomamos el valor que está a 5 posiciones del 10
+                         - Si llegara a ser correcto el orden que buscamos lo dejamos así, de lo contrario intercambiamos posiciones.
+                         - Al volver a ciclar el ciclo, tomamos el valor de K anterior y lo dividimos entre 2(tomamos el valor entero(casteo)) 
+                           ahora vamos a comparar el 10 con el valor que está la mitad de k posicones adelante
+                         - Al llegar al momento en el que K es igual a 1, entonces hacemos un *ordenamiento de insercion*
+                 "n" --> cantidad de elementos en el arreglo
 
     Merge sort:
     Quick sort:
@@ -96,7 +116,7 @@ Algoritmos de Busqueda:
         *Tipos de listas en java:
             *Dependiendo del procedimiento de insercion y extraccion de nodos en la lista , tenemos los siguientes tipos:
                 1. Lista tipo Pila
-                    - Una lista es de tipo pila, cuando las inserciones y extracciones se realizan por el mismo lado de la lista.+
+                    - Una lista es de tipo pila, cuando las inserciones y extracciones se realizan por el mismo lado de la lista.
                     - Caracterísitca: El último elemento en entrar es el primero en salir
                     - Se les conoce como LIFO (Last in, First Out)  ---> último en entrar, primero en salir
                     - una pila al ser una lista pude almacenar en el campo de información de un nodo cualquier tipo de valor:
@@ -105,3 +125,40 @@ Algoritmos de Busqueda:
                 3. Lista genéricas
 
 
+    |
+    |
+    |
+    |
+    |
+    v
+
+
+*** ESTRUCTURA DE DATOS ***
+    https://es.wikipedia.org/wiki/Estructura_de_datos
+
+    * En ciencias de la computación, una estructura de datos es una forma particular de organizar datos en una computadora para
+    que puedan ser utilizados de manera eficiente. Diferentes tipos de estructuras de datos son adecuados para diferentes tipos 
+    de aplicaciones, y algunos son altamente especializados para tareas específicas.
+
+    * Las estrucutras de datos son un medio para manejar grandes canitadades de datos de manera eficiente/ para usos tales como:
+      grandes bases de datos y servicios de indización de internet. Por lo general, ---> las estructuras de datos eficientes son 
+      clave para diseñara alogritmos eficientes <--- Algunos métoso formales de disño y lenguajes de progrmacion destacan las
+      estrucuras de datos, en lugar de los algoritmos, como el facotr clave de organizacion en el diseño de software.
+
+      * Tipos:
+        1. Vector: - es una serie de elementos en un orden específico, por lo general todos del mismo tipo (si bien los elementos 
+                     pueden ser de casi cualquier tipo). Se accede a los elementos utilizando un entero como índice para especificar
+                     el elemento que se requiere.
+
+        2. Vector Asociativo (también llamado diccionario o mapa):
+                    - es una variante más flexible que una matriz, en la que se puede añadir y eliminar libremente pares nombre-valor
+                    - Una tabla de hash es una implementación usual de un arreglo asociativo.
+
+        3. Registro (también llamado tupla o estructura):
+        4. Unión:
+        5. Tipo variante:
+        6. Conjunto:
+        7. Multiconjunto:
+        8. Grafo:
+        9. Árbol:
+        10. Clase:
