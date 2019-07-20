@@ -68,7 +68,7 @@ Algoritmos de ordenamiento:
                  "n" --> cantidad de elementos en el arreglo
 
 
-    4. Merge sort:
+    4. Merge sort (Directo):
         * Recursos:
          - http://www.pythondiario.com/2018/08/ordenamiento-por-mezcla-merge-sort.html
          - https://es.wikipedia.org/wiki/Ordenamiento_por_mezcla
@@ -104,9 +104,18 @@ Algoritmos de ordenamiento:
              En Java los métodos de ordenación de Arrays usan merge sort o una modificación de quicksort dependiendo de los tipos de
              datos y por cuestiones de eficiencia cambian a ordenamiento por inserción cuando se están ordenando menos de siete 
              elementos en el array.
+    
+    4. Merge sort (Natural):
+        *Recursos:
+            - https://www.youtube.com/watch?v=GgPYYiVtVQM&list=PLCLpAU8VN0j4RGemFfybZrWoSX57NbEq9&index=64
 
-
-
+        * Una variante al merge sort Directo
+        * En teoria es mas eficiente
+        * Normalente se usa para ordenar archivos
+        * Utiliza 3 arreglo: Arreglo Original, Arreglo Auxiliar 1 y otreo arreglo auxiliar
+        * se encarga de sacar tuplas de datos de valores ya ordenados del vector original.
+        * Una ves sacadas las tuplas con sus parejas, hacemos la FUSION(mezcla directa)
+        * ver video[LINK] en recursos
 
 
     Quick sort:
