@@ -176,8 +176,7 @@ Algoritmos de Busqueda:
                     valores enteros, valores flotantes, cadenas de caracteres, objetos, etc.
                 2. Lista tipo cola
                 3. Lista genéricas
-
-
+                
     |
     |
     |
