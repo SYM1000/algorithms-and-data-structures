@@ -1,5 +1,25 @@
 *****   Estructura de datos *****
 
+NOTAS:
+* Modelo de computación: es la definición un conjunto de operaciones permitibles usadas en el cómputo y sus respectivos costos.
+* Tiempo de ejecución: al intervalo de tiempo en el que un programa de computadora se ejecuta en un sistema operativo.
+* El Análisis de Algoritmos: es una parte importante de la Teoría de complejidad computacional más amplia, 
+                             que provee estimaciones teóricas para los recursos que necesita cualquier algoritmo que resuelva un problema computacional dado. 
+                             Estas estimaciones resultan ser bastante útiles en la búsqueda de algoritmos eficientes.
+* Numero de Operaciones: costo de calculo, es decir, cual es el número de operaciones que deberian realizarse para completarlo y obtener el resultado que estamos buscando.
+                         Esto permite calificar el algoritmo y comparar su eficiencia con respecto a otro que resuelva el mismo problema.
+                        - Operaciones de punto flotante, flops. Estas operaciones son las de suma, resta, multiplicaci ́on y divisi ́on.
+* Podemos utilizar la notación “O” para calificar el costo de cálculo.
+* Debemos tener presente que en el costo computacional de un algoritmo hay mucho máss que el número de operaciones que el mismo requiere. Por ejemplo,
+  en una computadora que cuente con un único procesador, el tiempo de ejecución está afectado por el movimiento de los datos entre distintos componentes 
+  de la memoria y por otros trabajos que estén ejecutándose al mismo tiempo. En una máquina con un procesador múltiple, también hay que tener en cuenta 
+  el tiempo empleado en la comunicación entre procesadores. Por el momento sólo nos enfocaremos en lo que respecta a la aritmética de un algoritmo.
+
+
+
+
+
+
 Algoritmos de ordenamiento: 
     - Un "buen algoritmo" de ordenamiento requiere de un orden nlogn comparaciones.
     - Recursos:
@@ -214,3 +234,106 @@ Algoritmos de Busqueda:
         8. Grafo:
         9. Árbol:
         10. Clase:
+
+CURSO ESTRUCTURA DE DATOS DE MasterHeHeGar:
+*** https://www.youtube.com/playlist?list=PLCLpAU8VN0j4RGemFfybZrWoSX57NbEq9 ***
+
+Cap. 08:
+    * Recursividad:
+        * ¿Que es la recursiva?
+            Es un proceso que ya ocurrio y que vuelve a ocurrir
+            -> Es un metodo que se llama a si mismo <-
+            - procedimiento para resolver un problema compeljo reduciendolo en uno o más subproblemas
+
+        * Caracterísitcas de la Recursividad:
+            - Misma estrucutra que el problema original
+            - Más simple de resolver que el problema original
+            - Cada subproblema se divide, usando el mismo procedimiento, en subproblemas aún mas simples
+            - Los subproblemas llegaran a ser tan simples que no hará falta dividirlos para resolverlos
+        
+        * Ejemplo Recursivo:
+            1) Recorrer un trayecto de un origen a un destino
+                |   |
+                |   |
+                |   -> Dar un paso desde el origen hacia el destino.
+                -> Dar(n -1) pasos hacia el destino desde el nuevo origen
+            
+            2) Subir una escalera
+                |   |
+                |   |
+                |   -> Subir un escalon.
+                -> subir los (n -1) escalones restantes
+                
+        * Estrucutura general de un algoritmo Recursivo
+
+            Problema ---> Caso Base: Respuesta Explicita
+                     ---> Dominio: Problema -1
+
+
+
+CLASE SALNAS NOTAS:
+
+    Recursividad:
+        Notas Tarea:
+        Fuente: https://www.linkedin.com/learning/java-avanzado/recursividad-directa?u=35799868
+            
+            Recursividad Directa Video:
+                ¿Que es recursividad?
+                    Cuando tenemos un metodo que se llama a si mismo
+                    es infinita hasta que la terminemos
+                
+                Tipos:
+                    -Directa: Se va a mandar llamar el metodo o funcion las veces que sea necesario con un limite finito
+                    - Indirecta
+
+                
+                Codigo:
+                    static long factorial(int n){
+                        
+                        if(n<=1){
+                            return 1:
+                        }else{
+                            long resultado = n*factorial(n-1);
+                            return resultado;
+                        }
+                    }
+
+            Recursividad Indirecta Video:
+                ¿Que es?
+                    el metodo A llama al B y el B al A
+                
+                - Se usan condicionales y ciclos para decidirt cuando va a terminar
+                - Esto no va acabar hasta que tenga que acabar, por eso se llama recursividad
+                - Y es indirecta por que el A manda a llamar al B y el B al A
+
+                 Codigo:
+                    static void metodoA(char x){
+                        if (x>"A"){
+                            metodoB(x){
+                                Syso(x)
+                            }
+                        }
+
+                    static void metodoB(char x){
+                            metodoA(--x);
+                        }
+                    }
+
+        Notas Videos LinkedIn learning:
+            *Head Recursion: Recive en los parametros solo un int n
+            * Breaking condition: condicion que permite al metodo terminar, en caso contrario el metodo sería infinito
+
+            Caculando Factoriales:
+                De manera iterativa: ultizariamos un for que va ir ciclando
+                                    factorial(n) = n * (n-1) * (n-2) * ....1
+                
+                De manera recursiva: factorial(n) = n * factorial(n-1)
+
+            *StackOverflow: Ocurre cuando no tenemos un breaking point por que el metodo sigue metiendo cosas en el stack (pila)
+                            en el factorial, el ultimo numero que saca(el primero en entrar) es el resultado del factorial
+                            - Se puede alcanzar el stack StackOverflow si el breaking condition is to deep :)
+
+
+            *Tail Recursion: Recive en los parametro un int n y un acumulador
+                - Este tipo de recursion no necesita stacks
+                - Utiliza acumuladores
