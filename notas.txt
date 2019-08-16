@@ -271,10 +271,19 @@ Cap. 08:
 
 
 
-CLASE SALNAS NOTAS:
+CLASE SALINAS NOTAS:
 
     Recursividad:
+    * En java se copian refrencias al llamar objetos, mientras que en primitivos no
+    * La recursion debe acercarse al caso base
+    * todos lo probelams recursivos se puden resolver de manera iterativa
+    * La carga computacional de un metodo recurisvo es mayor a la manera iterativa 
+    * Lo peor que nos puede ocurrrir en recurivismo: que un valor se cuelva a calcualar y calcular
+    * En el ejmplo se la serie de fibonacci tarda mucho por que se calculan muchas veces los mismos valores
+      El 2 se calcula 34 veces.
+
         Notas Tarea:
+    
         Fuente: https://www.linkedin.com/learning/java-avanzado/recursividad-directa?u=35799868
             
             Recursividad Directa Video:
