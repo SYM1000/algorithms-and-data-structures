@@ -29,6 +29,7 @@ Algoritmos de ordenamiento:
        * Recursos:
             - https://www.ecured.cu/Ordenamiento_de_burbuja
             - geekpedia de ernesto
+            - https://www.youtube.com/watch?v=nmhjrI-aW5o
 
         * Compara dos numeros entre si para poder ir haciendo el ordenmaineto de menor a mayor.
         * Puede ordenar de menor a mayor o viceversa.
@@ -346,3 +347,41 @@ CLASE SALINAS NOTAS:
             *Tail Recursion: Recive en los parametro un int n y un acumulador
                 - Este tipo de recursion no necesita stacks
                 - Utiliza acumuladores
+
+
+
+    Clase Fractales:
+        *Backtracking: Solver el problema a prueba y error. Como solucionar un laberinto.
+                       Resolver el problema a traves de solucionar problemas parciales, Si la 
+                       solucion parcial no funciona regreso y pruebo con otro solucion
+                       - Problema del tablero de n reinas
+
+
+
+
+
+
+
+
+
+CLASE PINEDA NOTAS:
+* Todo puede ser resuleto usando recursividad
+* Todo programador debe preguntqrse
+    - How long will my program take?
+    - 
+* Every program we do has to be optimaze 
+* Order of Growth
+
+* En entrvista: Preguntar cual es la longitud del array. cuando me digan un arreglo longitud n
+                Siempre averiguar la longitud del arreglo
+
+    Estrucutras lineales:
+        - Stack
+        - Queue
+        - LinkedList
+
+    Estrucutras no lineales:
+        - Arboles Binarios
+        - Gaphos
+        - hash
+    
