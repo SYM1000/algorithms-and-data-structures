@@ -14,7 +14,8 @@ NOTAS:
   en una computadora que cuente con un único procesador, el tiempo de ejecución está afectado por el movimiento de los datos entre distintos componentes 
   de la memoria y por otros trabajos que estén ejecutándose al mismo tiempo. En una máquina con un procesador múltiple, también hay que tener en cuenta 
   el tiempo empleado en la comunicación entre procesadores. Por el momento sólo nos enfocaremos en lo que respecta a la aritmética de un algoritmo.
-
+*We say that 50, 100, 500, 75, etc. are all on the order of 100, because all of these values can be expressed as 100c, where c
+is some positive constant. For example, 50 = (100)(0.5) and 500 = (100)(5).
 
 
 
@@ -24,6 +25,18 @@ Algoritmos de ordenamiento:
     - Un "buen algoritmo" de ordenamiento requiere de un orden nlogn comparaciones.
     - Recursos:
         https://www.monografias.com/trabajos/algordenam/algordenam.shtml
+
+    0. Selection Sort:
+       * Recursos: 
+            - https://www.youtube.com/watch?v=xWBP4lzkoyM
+            - https://techdifferences.com/difference-between-insertion-sort-and-selection-sort.html
+            
+        Logic:
+            Un arreglo se considera en dos partes. Una parte ordenada y una desordenada. Inicialmente el arreglo
+            está desordenado.
+        Seleccion: Selecciona el elemento mas chico en el arreglo
+        Intercambiar: LLevalo al punto de inicio
+        Counter Shift: Cambiar el contador del arreglo desordenado en 1
 
     1. Bubble sort:
        * Recursos:
@@ -139,7 +152,21 @@ Algoritmos de ordenamiento:
         * ver video[LINK] en recursos
 
 
-    Quick sort:
+    5. Quick sort:
+    *Recursos:
+        - https://www.youtube.com/watch?v=PgBzjlCcFvc
+    
+    * Este algoritmo de ordenamiento se basa en la tecnica de divide y venceras
+    * Se utiliza una variable llamada Pivot.
+    * Busca el elemento llamado Pivot, el cual divide el arreglo en dos mitades de tal manera
+      que los elementos a la izquierda del pivot son más chicos que el pivot y los de la derecha
+      son mas grandes que el pivot
+    
+    * recurivamente se realiza en 3 pasos:
+        - LLevas el pivot a su posicion adecuada de tal manera que la parte de la izquierda sea menor
+          que el pivot y la parte de la derecha sea mayor
+        - Hacemos quick sort en la parte izquierda
+        - Hacemos quick sort en la parte de la derecha
 
 
 
@@ -227,14 +254,33 @@ Algoritmos de Busqueda:
                     - es una variante más flexible que una matriz, en la que se puede añadir y eliminar libremente pares nombre-valor
                     - Una tabla de hash es una implementación usual de un arreglo asociativo.
 
-        3. Registro (también llamado tupla o estructura):
-        4. Unión:
-        5. Tipo variante:
-        6. Conjunto:
-        7. Multiconjunto:
-        8. Grafo:
-        9. Árbol:
-        10. Clase:
+        3. Registro (también llamado tupla o estructura):es una estructura de datos agregados. Un registro es un valor que contiene 
+                                                        otros valores, típicamente en un número fijo y la secuencia y por lo general 
+                                                        un índice por nombres. Los elementos de los registros generalmente son llamados 
+                                                        campos o celdas.
+
+        4. Unión: es una estructura de datos que especifica cuál de una serie de tipos de datos permitidos podrá ser almacenada en sus 
+                  instancias, por ejemplo flotante o entero largo. En contraste con un registro, que se podría definir para contener un 
+                  flotante y un entero largo, en una unión, sólo hay un valor a la vez. Se asigna suficiente espacio para contener el 
+                  tipo de datos de cualquiera de los miembros.
+
+        5. Tipo variante: contiene un campo adicional que indica su tipo actual.
+
+        6. Conjunto: es un tipo de datos abstracto que puede almacenar valores específicos, sin orden particular y sin valores duplicados.
+
+        7. Multiconjunto: es un tipo de datos abstracto que puede almacenar valores específicos, sin orden particular.
+                          A diferencia de los conjuntos, los multiconjuntos admiten repeticiones.
+
+        8. Grafo: es una estructura de datos conectada compuesta por nodos. Cada nodo contiene un valor y una o más referencias a otros nodos. 
+                  Los grafos pueden utilizarse para representar redes, dado que los nodos pueden referenciarse entre ellos. 
+                  Las conexiones entre nodos pueden tener dirección, es decir un nodo de partida y uno de llegada.
+
+        9. Árbol: es un caso particular de grafo dirigido en el que no se admiten ciclos y existe un camino desde un nodo llamado raíz 
+                  hasta cada uno de los otros nodos. Una colección de árboles es llamada un bosque.
+
+        10. Clase: es una plantilla para la creación de objetos de datos según un modelo predefinido. Las clases se utilizan como 
+                   representación abstracta de conceptos, incluyen campos como los registros y operaciones que pueden consultar el
+                   valor de los campos o cambiar sus valores.
 
 CURSO ESTRUCTURA DE DATOS DE MasterHeHeGar:
 *** https://www.youtube.com/playlist?list=PLCLpAU8VN0j4RGemFfybZrWoSX57NbEq9 ***
@@ -356,11 +402,56 @@ CLASE SALINAS NOTAS:
                        solucion parcial no funciona regreso y pruebo con otro solucion
                        - Problema del tablero de n reinas
 
+    Clase Busqueda Binaria:
+        - Necesitamos 3 variables -> Min(indice menor donde se busca ), Max(indice mayor ) y avg(punto medio de los indices del arreglo)
+        - Cundo min y max llegan al mimso valor con seguridad econtaste el valor o no existe el numero
+        - Utilizar el Equals para comparar strigns
 
 
 
+    Clase de Bubble Sort:
+        * Error comun: querer comparar hasta n, por que va a comparar n + 1, lo que da stack over flow
+        * Cunatas iteraciones necesitamos? n-1 iteraciones
+
+        * Etiquetar fors:
+          --->  uno:for (int i = 0; i < datos.length-1 && desordenados; i++) {
+                if(!desordenados) {
+				break uno;    <-------
+			}
+
+    Clase de Merge sort:
+    * En computacion cuando no se espesifica la base del log es 2 
+    - tiene una complejidad Onlogn
+    - la desventaja es que neceita memoria adicional, necesita n memoria extra
+    - Su implementacion por naturaleza es recursiva 
+
+    Quick sort:
+    - Hay muchas implementacones de el, por que hay n formas de esoger el pivote y hay muchas formas de pasar los menores a al izquierda y lo mayores a la derecha
+    - a diferencia de merge, quick no neceita memoria adicional, lo hace in place
+    - la mayoria de la veces lo que ordena son valores sin repeticion
+    - Por cada iteracion el pivote es el que se va ordenando
+    - Acerca de la particion
+            - Se puede hacer en un tiempo lineas de O(n), sin memoria adicional
+            - reduce el tamaño del problema
+            - La manera más facil de hacerlo es en O(n), pero utilizando memoria adicional
+            - si tomamos el pivote de la izquierda como sub[0] llegaria On2 por que despues va a tomar n pivotes, cada uno de los 
+            datos de la derecha serán los pivotes,
+            - La mejor forma es seleciconar un pivote aleatorio se acercará a O(nlogn)
 
 
+    Clase Listas Enlazadas:
+    - En algunas desventajas al usar arreglos el orden de un inset se convierte en O(n)
+    - Una lisa enlazada esta compuesta por nodos
+    * DIFERENCIA ENTRE ARREGLOS Y LISTAS ENLAZADAS: Se van creando arreglo a la neceisdad que los voya usando
+        - Precio para tener una estrucutra dinmaica es guardar una referncia
+        - Lo saca de la memoria ram, esperdificamente de la heap
+
+    -las listas enlazadas surgen como solucion a los problemas de los arreglos
+    - Se usa la lista enlazada para donde se tiene una incertidumbre de cuantos datos vamos a usar
+    -----> "Los arreglos son una chulada, una estructura preciosa" -Salinas <----
+    nodos: contien el dato que voy a lamacaenar y la direcion a la que apunta
+    ERROR MAS COMUN: Cuando estabas trabajando con listas enlazadas se pude perder el resto de la lista
+            Recomendacion: hacer el dibujito
 
 
 
@@ -384,4 +475,6 @@ CLASE PINEDA NOTAS:
         - Arboles Binarios
         - Gaphos
         - hash
-    
+
+#Segunda clase:
+    *Code Analisis
